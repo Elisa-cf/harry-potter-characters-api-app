@@ -10,7 +10,9 @@ function App() {
 
   useEffect(()=> {
     const fetchItems = async () => {
-      const result = await axios(`https://projectheist.herokuapp.com/characters/1`)
+      const result = await axios(`http://hp-api.herokuapp.com/api/characters
+
+      `)
 
       console.log(result.data)
 
