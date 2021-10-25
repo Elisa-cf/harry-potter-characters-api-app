@@ -8,11 +8,11 @@ import './App.css';
 function App() {
   const [items, setItems] = useState([])
   const [isLoading, setIsLoading] = useState(true)
-  const [query, setQuery] = useState('')
+  const [text, setText] = useState('')
 
   useEffect(()=> {
     const fetchItems = async () => {
-      const result = await axios(`http://hp-api.herokuapp.com/api/characters?name=${query}`)
+      const result = await axios(`http://hp-api.herokuapp.com/api/characters`)
 
       //console.log(result.data)
 
@@ -23,13 +23,13 @@ function App() {
 
     fetchItems()
 
-  }, [query])
+  }, [])
 
   return (
     <div className="container">
       <Header/>
-      <Search getQuery={(q)=> setQuery(q)}/>
-      <CharacterGrid isLoading={isLoading} items={items}/>
+      <Search text={text} setText={setText}/>
+      <CharacterGrid isLoading={isLoading} items={items} text={text}/>
     </div>
   );
 }

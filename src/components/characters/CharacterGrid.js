@@ -3,15 +3,16 @@ import { nanoid } from "nanoid";
 import CharacterItem from './CharacterItem'
 import Spinner from '../ui/Spinner'
 
-const CharacterGrid = ( {items, isLoading }) => {
+const CharacterGrid = ( {items, isLoading, text }) => {
     return isLoading ? (
     <Spinner />
     ) : (
     <section className='cards'>
-        {items.map(item => (
-        <CharacterItem key={nanoid()} item={item}></CharacterItem>
+        {items.filter(item => text === "" ? true : item.name.toLowerCase().includes(text.toLowerCase()))
+        .map(item => (
+            <CharacterItem key={nanoid()} item={item}></CharacterItem>
         )) }
-        </section>
+    </section>
    )
 }
 
