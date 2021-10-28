@@ -2,7 +2,7 @@
 
 > Fan of HP? In this project I've used REACT and the Harry Potter api (https://hp-api.herokuapp.com/) to create an app that displays and filter the character info.
 
-##This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
