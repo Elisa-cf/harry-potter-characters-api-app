@@ -5,8 +5,9 @@ const CharacterItem = (props) => {
         <div className='card'>
           <div className='card-inner'>
             <div className='card-front'>
-              <img src={props.item.image} alt='' />
+              {props.item.image ? <img src={props.item.image} alt=''/> : <img src="https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled.png" /> }
             </div>
+
             <div className='card-back'>
               <h1>{props.item.name}</h1>
               <ul>
