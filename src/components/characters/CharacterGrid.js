@@ -3,7 +3,8 @@ import { nanoid } from "nanoid";
 import CharacterItem from './CharacterItem'
 import Spinner from '../ui/Spinner'
 
-const CharacterGrid = ( {items, isLoading, text }) => {
+const CharacterGrid = (props) => {
+    const { isLoading, items, text} = props;
     return isLoading ? (
     <Spinner />
     ) : (

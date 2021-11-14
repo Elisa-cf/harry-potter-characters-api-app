@@ -12,7 +12,7 @@ function App() {
 
   useEffect(()=> {
     const fetchItems = async () => {
-      const result = await axios(`http://hp-api.herokuapp.com/api/characters`)
+      const result = await axios(`https://hp-api.herokuapp.com/api/characters`)
 
       //console.log(result.data)
 
